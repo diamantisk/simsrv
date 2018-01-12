@@ -56,7 +56,8 @@
     <param name="management" value="off" />
   </syslog>
   <simsrv>
-    <param name="sys_uuid" value="2" />
+    <param name="cloud_uuid" value="1" />
+    <param name="sys_uuid" value="1" />
     <param name="sys_alias" value="server01" />
     <param name="sys_pub_ip" value="127.0.0.1" />
     <param name="sys_eth_ip" value="lo" />
@@ -69,12 +70,12 @@
     <param name="web_proxy_port" value="8080" />
     <param name="telnet_proxy_port" value="8090" />
     <param name="service_api_port" value="3030" />
-    <param name="mysql_url" value="10.24.37.59" />
+    <param name="mysql_url" value="localhost" />
     <param name="mysql_port" value="3306" />
-    <param name="mysql_db" value="simserver" />
-    <param name="mysql_user" value="evan" />
+    <param name="mysql_db" value="simserver02" />
+    <param name="mysql_user" value="dinstar" />
     <param name="mysql_pwd" value="123456" />
-    <param name="prov_url" value="server02.dmcld.com" />
+    <param name="prov_url" value="172.16.0.40" />
     <param name="prov_user" value="ftpuser" />
     <param name="prov_pwd" value="123456" />
     <param name="dns_url01" value="dns01.dmcld.com" />
@@ -86,7 +87,7 @@
     <param name="ice_idle_time" value="10" />
     <param name="srv_check_time" value="3600" />
     <param name="log_server" value="localhost" />
-    <param name="sys_ip_addr" value="127.0.0.1" />
+    <param name="sys_ip_addr" value="172.16.0.40" />
     <param name="telnet_max_connect" value="100" />
     <param name="max_sms_queue_size" value="128" />
   </simsrv>
