@@ -8,6 +8,8 @@ ADD dinstar/bin/* /dinstar/bin/
 ADD dinstar/cfg/* /dinstar/cfg/
 RUN chmod 777 -R /dinstar
 
-RUN ls -al /dinstar/
+RUN touch /var/log/simsrv.log
+RUN chmod 777 /var/log/simsrv.log
 
-CMD ["/dinstar/bin/simsrv"]
+WORKDIR /dinstar/bin/
+CMD ["tail","-f","/var/log/simsrv.log"]
