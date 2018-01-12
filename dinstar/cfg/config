@@ -1,333 +1,329 @@
 <?xml version="1.0" encoding="utf-8"?>
 <config version="1.0">
-  <param name="telnet port" value="23" />
-  <provision>
-    <param name="url" value="" />
-    <param name="interval" value="86400" />
-    <param name="provison_account" value="" />
-    <param name="provison_password" value="" />
-    <param name="proxy_domain" value="" />
-    <param name="proxy_port" value="" />
-    <param name="proxy_account" value="" />
-    <param name="proxy_password" value="" />
-  </provision>
-  <syslog>
-    <param name="flag" value="off" />
-    <param name="level" value="1" />
-    <param name="cdr" value="off" />
-    <param name="ip" value="127.0.0.1" />
-    <param name="port" value="514" />
-    <signal>
-      <param name="53" value="off" />
-      <param name="71" value="off" />
-      <param name="83" value="off" />
-      <param name="84" value="off" />
-      <param name="111" value="off" />
-      <param name="112" value="off" />
-    </signal>
-    <media>
-      <param name="44" value="off" />
-      <param name="113" value="off" />
-    </media>
-    <system>
-      <param name="0" value="off" />
-      <param name="1" value="off" />
-      <param name="3" value="off" />
-      <param name="4" value="off" />
-      <param name="5" value="off" />
-      <param name="17" value="off" />
-      <param name="42" value="off" />
-      <param name="50" value="off" />
-      <param name="60" value="off" />
-      <param name="93" value="off" />
-    </system>
-    <management>
-      <param name="24" value="off" />
-      <param name="25" value="off" />
-      <param name="26" value="off" />
-      <param name="40" value="off" />
-      <param name="43" value="off" />
-      <param name="78" value="off" />
-      <param name="92" value="off" />
-    </management>
-    <param name="signal" value="off" />
-    <param name="media" value="off" />
-    <param name="system" value="off" />
-    <param name="management" value="off" />
-  </syslog>
-  <simsrv>
-    <param name="cloud_uuid" value="1" />
-    <param name="sys_uuid" value="1" />
-    <param name="sys_alias" value="server01" />
-    <param name="sys_pub_ip" value="127.0.0.1" />
-    <param name="sys_eth_ip" value="lo" />
-    <param name="stun_listen_eth" value="lo" />
-    <param name="stun_udp_port01" value="13478" />
-    <param name="stun_tcp_port01" value="13478" />
-    <param name="stun_udp_port02" value="18478" />
-    <param name="stun_tcp_port02" value="18478" />
-    <param name="trans_listen_port" value="2020" />
-    <param name="web_proxy_port" value="8080" />
-    <param name="telnet_proxy_port" value="8090" />
-    <param name="service_api_port" value="3030" />
-    <param name="mysql_url" value="server02.dmcld.com" />
-    <param name="mysql_port" value="3306" />
-    <param name="mysql_db" value="simserver" />
-    <param name="mysql_user" value="drp" />
-    <param name="mysql_pwd" value="123456" />
-    <param name="prov_url" value="172.16.0.40" />
-    <param name="prov_user" value="ftpuser" />
-    <param name="prov_pwd" value="123456" />
-    <param name="dns_url01" value="dns01.dmcld.com" />
-    <param name="dns_url02" value="dns02.dmcld.com" />
-    <param name="dns_domain01" value="dmcld.com" />
-    <param name="dns_domain02" value="ucspeed2.com" />
-    <param name="mysql_url02" value="localhost" />
-    <param name="mysql_port02" value="3306" />
-    <param name="ice_idle_time" value="10" />
-    <param name="srv_check_time" value="3600" />
-    <param name="log_server" value="localhost" />
-    <param name="sys_ip_addr" value="172.16.0.40" />
-    <param name="telnet_max_connect" value="100" />
-    <param name="max_sms_queue_size" value="128" />
-  </simsrv>
-  <db>
-    <param name="serverip" value="localhost" />
-    <param name="port" value="3306" />
-    <param name="serverip2" value="localhost" />
-    <param name="port2" value="3306" />
-    <param name="database" value="simserver" />
-    <param name="user" value="dinstar" />
-    <param name="password" value="123456" />
-    <param name="mysql_high_hdl" value="4" />
-    <param name="mysql_normal_hdl" value="8" />
-    <param name="mysql_low_hdl" value="4" />
-    <param name="port_thread" value="0" />
-  </db>
-  <filelog>
-    <param name="flag" value="on" />
-    <param name="level" value="7" />
-    <param name="file" value="/var/log/simsrv.log" />
-    <param name="size" value="20480" />
-    <param name="rotate" value="10" />
-    <param name="system" value="off" />
-    <param name="signal" value="on" />
-    <param name="media" value="off" />
-    <param name="management" value="off" />
-  </filelog>
-  <web>
-    <param name="web port" value="80" />
-    <param name="rootdir" value="/flash/apps/web" />
-    <users>
-      <user1>
-        <param name="username" value="admin" />
-        <param name="password" value="" />
-      </user1>
-    </users>
-  </web>
-  <cli>
-    <param name="idle time" value="5" />
-    <param name="max count" value="5" />
-    <users>
-      <user1>
-        <param name="username" value="admin" />
-        <param name="password" value="" />
-      </user1>
-    </users>
-  </cli>
-  <ntp>
-    <param name="flag" value="off" />
-    <param name="interval" value="86400" />
-    <param name="zone hour" value="8" />
-    <param name="zone minute" value="0" />
-    <server1>
-      <param name="domain" value="us.pool.ntp.org" />
-      <param name="port" value="123" />
-    </server1>
-    <server2>
-      <param name="domain" value="18.145.0.30" />
-      <param name="port" value="123" />
-    </server2>
-  </ntp>
-  <network>
-    <param name="ethtype" value="mngt" />
-    <param name="dmz" value="off" />
-    <param name="remotemngt" value="off" />
-    <eth0>
-      <param name="ipmode" value="static" />
-      <param name="ip" value="192.168.11.1" />
-      <param name="mask" value="255.255.255.0" />
-      <param name="mtu" value="1500" />
-      <param name="gateway" value="" />
-      <param name="pppuser" value="" />
-      <param name="ppppwd" value="" />
-      <param name="usepeerdns" value="off" />
-      <param name="dns1" value="" />
-      <param name="dns2" value="" />
-      <param name="mac" value="00:12:34:56:78:00" />
-      <datavlan>
-        <param name="flag" value="off" />
-        <param name="vlanid" value="0" />
-        <param name="priid" value="0" />
-        <param name="ipmode" value="static" />
-        <param name="ip" value="" />
-        <param name="mask" value="" />
-        <param name="mtu" value="1400" />
-        <param name="gateway" value="" />
-        <param name="usepeerdns" value="off" />
-        <param name="dns1" value="" />
-        <param name="dns2" value="" />
-        <param name="pppuser" value="" />
-        <param name="ppppwd" value="" />
-      </datavlan>
-      <voicevlan>
-        <param name="flag" value="off" />
-        <param name="vlanid" value="0" />
-        <param name="priid" value="0" />
-        <param name="ipmode" value="static" />
-        <param name="ip" value="" />
-        <param name="mask" value="" />
-        <param name="mtu" value="1400" />
-        <param name="gateway" value="" />
-        <param name="usepeerdns" value="off" />
-        <param name="dns1" value="" />
-        <param name="dns2" value="" />
-        <param name="pppuser" value="" />
-        <param name="ppppwd" value="" />
-      </voicevlan>
-      <mngtvlan>
-        <param name="flag" value="off" />
-        <param name="vlanid" value="0" />
-        <param name="priid" value="0" />
-        <param name="ipmode" value="static" />
-        <param name="ip" value="" />
-        <param name="mask" value="" />
-        <param name="mtu" value="1400" />
-        <param name="gateway" value="" />
-        <param name="usepeerdns" value="off" />
-        <param name="dns1" value="" />
-        <param name="dns2" value="" />
-        <param name="pppuser" value="" />
-        <param name="ppppwd" value="" />
-      </mngtvlan>
-    </eth0>
-    <eth1>
-      <param name="ipmode" value="static" />
-      <param name="ip" value="192.168.1.111" />
-      <param name="mask" value="255.255.255.0" />
-      <param name="mtu" value="1500" />
-      <param name="gateway" value="" />
-      <param name="pppuser" value="" />
-      <param name="ppppwd" value="" />
-      <param name="usepeerdns" value="off" />
-      <param name="dns1" value="" />
-      <param name="dns2" value="" />
-      <param name="mac" value="00:12:34:56:78:01" />
-      <datavlan>
-        <param name="flag" value="off" />
-        <param name="vlanid" value="0" />
-        <param name="priid" value="0" />
-        <param name="ipmode" value="static" />
-        <param name="ip" value="" />
-        <param name="mask" value="" />
-        <param name="mtu" value="1400" />
-        <param name="gateway" value="" />
-        <param name="usepeerdns" value="off" />
-        <param name="dns1" value="" />
-        <param name="dns2" value="" />
-        <param name="pppuser" value="" />
-        <param name="ppppwd" value="" />
-      </datavlan>
-      <voicevlan>
-        <param name="flag" value="off" />
-        <param name="vlanid" value="0" />
-        <param name="priid" value="0" />
-        <param name="ipmode" value="static" />
-        <param name="ip" value="" />
-        <param name="mask" value="" />
-        <param name="mtu" value="1400" />
-        <param name="gateway" value="" />
-        <param name="usepeerdns" value="off" />
-        <param name="dns1" value="" />
-        <param name="dns2" value="" />
-        <param name="pppuser" value="" />
-        <param name="ppppwd" value="" />
-      </voicevlan>
-      <mngtvlan>
-        <param name="flag" value="off" />
-        <param name="vlanid" value="0" />
-        <param name="priid" value="0" />
-        <param name="ipmode" value="static" />
-        <param name="ip" value="" />
-        <param name="mask" value="" />
-        <param name="mtu" value="1400" />
-        <param name="gateway" value="" />
-        <param name="usepeerdns" value="off" />
-        <param name="dns1" value="" />
-        <param name="dns2" value="" />
-        <param name="pppuser" value="" />
-        <param name="ppppwd" value="" />
-      </mngtvlan>
-    </eth1>
-    <dhcp_server>
-      <param name="flag" value="off" />
-      <param name="ipstart" value="192.168.1.120" />
-      <param name="ipend" value="192.168.1.199" />
-      <param name="mask" value="255.255.255.0" />
-      <param name="leasetime" value="3600" />
-      <param name="gateway" value="192.168.1.111" />
-      <param name="dns1" value="192.168.1.111" />
-      <param name="dns2" value="" />
-    </dhcp_server>
-    <natfwd>
-      <fwd0>
-        <param name="flag" value="off" />
-        <param name="proto" value="" />
-        <param name="localip" value="" />
-        <param name="localport" value="" />
-      </fwd0>
-      <fwd1>
-        <param name="flag" value="off" />
-        <param name="proto" value="" />
-        <param name="localip" value="" />
-        <param name="localport" value="" />
-      </fwd1>
-      <fwd2>
-        <param name="flag" value="off" />
-        <param name="proto" value="" />
-        <param name="localip" value="" />
-        <param name="localport" value="" />
-      </fwd2>
-      <fwd3>
-        <param name="flag" value="off" />
-        <param name="proto" value="" />
-        <param name="localip" value="" />
-        <param name="localport" value="" />
-      </fwd3>
-      <fwd4>
-        <param name="flag" value="off" />
-        <param name="proto" value="" />
-        <param name="localip" value="" />
-        <param name="localport" value="" />
-      </fwd4>
-      <fwd5>
-        <param name="flag" value="off" />
-        <param name="proto" value="" />
-        <param name="localip" value="" />
-        <param name="localport" value="" />
-      </fwd5>
-      <fwd6>
-        <param name="flag" value="off" />
-        <param name="proto" value="" />
-        <param name="localip" value="" />
-        <param name="localport" value="" />
-      </fwd6>
-      <fwd7>
-        <param name="flag" value="off" />
-        <param name="proto" value="" />
-        <param name="localip" value="" />
-        <param name="localport" value="" />
-      </fwd7>
-    </natfwd>
-  </network>
-</config> 
+	<param name="telnet port" value="23" />
+	<provision>
+		<param name="url" value="" />
+		<param name="interval" value="86400" />
+		<param name="provison_account" value="" />
+		<param name="provison_password" value="" />
+		<param name="proxy_domain" value="" />
+		<param name="proxy_port" value="" />
+		<param name="proxy_account" value="" />
+		<param name="proxy_password" value="" />
+	</provision>
+	<syslog>
+		<param name="flag" value="off" />
+		<param name="level" value="1" />
+		<param name="cdr" value="off" />
+		<param name="ip" value="127.0.0.1" />
+		<param name="port" value="514" />
+		<signal>
+			<param name="53" value="off" />
+			<param name="71" value="off" />
+			<param name="83" value="off" />
+			<param name="84" value="off" />
+			<param name="111" value="off" />
+			<param name="112" value="off" />
+		</signal>
+		<media>
+			<param name="44" value="off" />
+			<param name="113" value="off" />
+		</media>
+		<system>
+			<param name="0" value="off" />
+			<param name="1" value="off" />
+			<param name="3" value="off" />
+			<param name="4" value="off" />
+			<param name="5" value="off" />
+			<param name="17" value="off" />
+			<param name="42" value="off" />
+			<param name="50" value="off" />
+			<param name="60" value="off" />
+			<param name="93" value="off" />
+		</system>
+		<management>
+			<param name="24" value="off" />
+			<param name="25" value="off" />
+			<param name="26" value="off" />
+			<param name="40" value="off" />
+			<param name="43" value="off" />
+			<param name="78" value="off" />
+			<param name="92" value="off" />
+		</management>
+	</syslog>
+	<simsrv>
+    	<param name="cloud_uuid" value="1"/>
+    	<param name="sys_uuid" value="1"/>
+    	<param name="sys_alias" value="server01"/>
+    	<param name="sys_pub_ip" value="127.0.0.1"/>
+    	<param name="sys_eth_ip" value="127.0.0.1"/>
+    	<param name="stun_listen_eth" value="lo"/>
+    	<param name="stun_udp_port01" value="13478"/>
+    	<param name="stun_tcp_port01" value="13478"/>
+    	<param name="stun_udp_port02" value="18478"/>
+    	<param name="stun_tcp_port02" value="18478"/>
+    	<param name="trans_listen_port" value="2020"/>
+    	<param name="web_proxy_port" value="8080"/>
+        <param name="telnet_proxy_port" value="8090"/>
+    	<param name="service_api_port" value="3030"/>
+    	<param name="mysql_url" value="server02.dmcld.com"/>
+    	<param name="mysql_port" value="3306"/>
+    	<param name="mysql_db" value="simserver"/>
+    	<param name="mysql_user" value="drp"/>
+    	<param name="mysql_pwd" value="123456"/>
+        <param name="prov_url" value="172.16.0.40" />
+        <param name="prov_user" value="ftpuser" />
+        <param name="prov_pwd" value="123456" />
+        <param name="dns_url01" value="dns01.dmcld.com" />
+        <param name="dns_url02" value="dns02.dmcld.com" />
+    	<param name="dns_domain01" value="dmcld.com"/>
+    	<param name="dns_domain02" value="ucspeed2.com"/>
+    	<param name="mysql_url02" value="localhost"/>
+    	<param name="mysql_port02" value="3306"/>
+	<param name="ice_idle_time" value="10"/>
+	<param name="srv_check_time" value="3600"/>
+	<param name="log_server" value="localhost"/>
+    	<param name="sys_ip_addr" value="127.0.0.1"/>
+        <param name="telnet_max_connect" value="100" />
+        <param name="max_sms_queue_size" value="128" />
+	</simsrv>
+	<db>
+		<param name="serverip" value="server02.dmcld.com"/>
+		<param name="port" value="3306"/>
+		<param name="serverip2" value="localhost"/>
+		<param name="port2" value="3306"/>
+		<param name="database" value="simserver"/>
+		<param name="user" value="drp"/>
+		<param name="password" value="123456"/>
+		<param name="mysql_high_hdl" value="4"/>
+		<param name="mysql_normal_hdl" value="8"/>
+		<param name="mysql_low_hdl" value="4"/>
+		<param name="port_thread" value="0"/>
+	</db>
+	<filelog>
+		<param name="flag" value="on" />
+		<param name="level" value="7" />
+		<param name="file" value="/var/log/simsrv.log" />
+		<param name="size" value="20480" />
+		<param name="rotate" value="10" />
+		<param name="system" value="off" />
+		<param name="signal" value="on" />
+		<param name="media" value="off" />
+		<param name="management" value="off" />
+	</filelog>
+	<web>
+		<param name="web port" value="80" />
+		<param name="rootdir" value="/flash/apps/web" />
+		<users>
+			<user1>
+				<param name="username" value="admin" />
+                <param name="password" value="" />
+			</user1>
+		</users>
+	</web>
+	<cli>
+		<param name="idle time" value="5" />
+		<param name="max count" value="5" />
+		<users>
+			<user1>
+				<param name="username" value="admin" />
+                <param name="password" value="" />
+			</user1>
+		</users>
+	</cli>
+	<ntp>
+		<param name="flag" value="off" />
+		<param name="interval" value="86400" />
+		<param name="zone hour" value="8" />
+		<param name="zone minute" value="0" />
+		<server1>
+			<param name="domain" value="us.pool.ntp.org" />
+			<param name="port" value="123" />
+		</server1>
+		<server2>
+			<param name="domain" value="18.145.0.30" />
+			<param name="port" value="123" />
+		</server2>
+	</ntp>
+	<network>
+		<param name="ethtype" value="mngt" />
+		<param name="dmz" value="off" />
+		<param name="remotemngt" value="off" />
+		<eth0>
+			<param name="ipmode" value="static" />
+			<param name="ip" value="192.168.11.1" />
+			<param name="mask" value="255.255.255.0" />
+			<param name="mtu" value="1500" />
+			<param name="gateway" value="" />
+			<param name="pppuser" value="" />
+			<param name="ppppwd" value="" />
+			<param name="usepeerdns" value="off" />
+			<param name="dns1" value="" />
+			<param name="dns2" value="" />
+			<param name="mac" value="00:12:34:56:78:00" />
+			<datavlan>
+				<param name="flag" value="off" />
+				<param name="vlanid" value="0" />
+				<param name="priid" value="0" />
+				<param name="ipmode" value="static" />
+				<param name="ip" value="" />
+				<param name="mask" value="" />
+				<param name="mtu" value="1400" />
+				<param name="gateway" value="" />
+				<param name="usepeerdns" value="off" />
+				<param name="dns1" value="" />
+				<param name="dns2" value="" />
+				<param name="pppuser" value="" />
+				<param name="ppppwd" value="" />
+			</datavlan>
+			<voicevlan>
+				<param name="flag" value="off" />
+				<param name="vlanid" value="0" />
+				<param name="priid" value="0" />
+				<param name="ipmode" value="static" />
+				<param name="ip" value="" />
+				<param name="mask" value="" />
+				<param name="mtu" value="1400" />
+				<param name="gateway" value="" />
+				<param name="usepeerdns" value="off" />
+				<param name="dns1" value="" />
+				<param name="dns2" value="" />
+				<param name="pppuser" value="" />
+				<param name="ppppwd" value="" />
+			</voicevlan>
+			<mngtvlan>
+				<param name="flag" value="off" />
+				<param name="vlanid" value="0" />
+				<param name="priid" value="0" />
+				<param name="ipmode" value="static" />
+				<param name="ip" value="" />
+				<param name="mask" value="" />
+				<param name="mtu" value="1400" />
+				<param name="gateway" value="" />
+				<param name="usepeerdns" value="off" />
+				<param name="dns1" value="" />
+				<param name="dns2" value="" />
+				<param name="pppuser" value="" />
+				<param name="ppppwd" value="" />
+			</mngtvlan>
+		</eth0>
+		<eth1>
+			<param name="ipmode" value="static" />
+			<param name="ip" value="192.168.1.111" />
+			<param name="mask" value="255.255.255.0" />
+			<param name="mtu" value="1500" />
+			<param name="gateway" value="" />
+			<param name="pppuser" value="" />
+			<param name="ppppwd" value="" />
+			<param name="usepeerdns" value="off" />
+			<param name="dns1" value="" />
+			<param name="dns2" value="" />
+			<param name="mac" value="00:12:34:56:78:01" />
+			<datavlan>
+				<param name="flag" value="off" />
+				<param name="vlanid" value="0" />
+				<param name="priid" value="0" />
+				<param name="ipmode" value="static" />
+				<param name="ip" value="" />
+				<param name="mask" value="" />
+				<param name="mtu" value="1400" />
+				<param name="gateway" value="" />
+				<param name="usepeerdns" value="off" />
+				<param name="dns1" value="" />
+				<param name="dns2" value="" />
+				<param name="pppuser" value="" />
+				<param name="ppppwd" value="" />
+			</datavlan>
+			<voicevlan>
+				<param name="flag" value="off" />
+				<param name="vlanid" value="0" />
+				<param name="priid" value="0" />
+				<param name="ipmode" value="static" />
+				<param name="ip" value="" />
+				<param name="mask" value="" />
+				<param name="mtu" value="1400" />
+				<param name="gateway" value="" />
+				<param name="usepeerdns" value="off" />
+				<param name="dns1" value="" />
+				<param name="dns2" value="" />
+				<param name="pppuser" value="" />
+				<param name="ppppwd" value="" />
+			</voicevlan>
+			<mngtvlan>
+				<param name="flag" value="off" />
+				<param name="vlanid" value="0" />
+				<param name="priid" value="0" />
+				<param name="ipmode" value="static" />
+				<param name="ip" value="" />
+				<param name="mask" value="" />
+				<param name="mtu" value="1400" />
+				<param name="gateway" value="" />
+				<param name="usepeerdns" value="off" />
+				<param name="dns1" value="" />
+				<param name="dns2" value="" />
+				<param name="pppuser" value="" />
+				<param name="ppppwd" value="" />
+			</mngtvlan>
+		</eth1>
+		<dhcp_server>
+			<param name="flag" value="off" />
+			<param name="ipstart" value="192.168.1.120" />
+			<param name="ipend" value="192.168.1.199" />
+			<param name="mask" value="255.255.255.0" />
+			<param name="leasetime" value="3600" />
+			<param name="gateway" value="192.168.1.111" />
+			<param name="dns1" value="192.168.1.111" />
+			<param name="dns2" value="" />
+		</dhcp_server>
+		<natfwd>
+			<fwd0>
+				<param name="flag" value="off" />
+				<param name="proto" value="" />
+				<param name="localip" value="" />
+				<param name="localport" value="" />
+			</fwd0>
+			<fwd1>
+				<param name="flag" value="off" />
+				<param name="proto" value="" />
+				<param name="localip" value="" />
+				<param name="localport" value="" />
+			</fwd1>
+			<fwd2>
+				<param name="flag" value="off" />
+				<param name="proto" value="" />
+				<param name="localip" value="" />
+				<param name="localport" value="" />
+			</fwd2>
+			<fwd3>
+				<param name="flag" value="off" />
+				<param name="proto" value="" />
+				<param name="localip" value="" />
+				<param name="localport" value="" />
+			</fwd3>
+			<fwd4>
+				<param name="flag" value="off" />
+				<param name="proto" value="" />
+				<param name="localip" value="" />
+				<param name="localport" value="" />
+			</fwd4>
+			<fwd5>
+				<param name="flag" value="off" />
+				<param name="proto" value="" />
+				<param name="localip" value="" />
+				<param name="localport" value="" />
+			</fwd5>
+			<fwd6>
+				<param name="flag" value="off" />
+				<param name="proto" value="" />
+				<param name="localip" value="" />
+				<param name="localport" value="" />
+			</fwd6>
+			<fwd7>
+				<param name="flag" value="off" />
+				<param name="proto" value="" />
+				<param name="localip" value="" />
+				<param name="localport" value="" />
+			</fwd7>
+		</natfwd>
+	</network>
+</config>
