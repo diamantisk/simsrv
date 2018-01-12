@@ -1,6 +1,6 @@
 FROM i386/gcc:4.8
 
-RUN apt-get update && apt-get install libsctp-dev -y
+RUN apt-get update && apt-get install libsctp-dev -y && apt-get install telnet -y
 
 RUN mkdir -p /var/log/
 
