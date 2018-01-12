@@ -1,10 +1,13 @@
 FROM i386/gcc:4.8
+
 RUN apt-get update && apt-get install libsctp-dev -y
-RUN mkdir -p /dinstar/bin
-RUN mkdir -p /var/logs
-ADD simsrv /dinstar/bin/simsrv
-RUN chmod 777 /dinstar/bin/simsrv
+
+RUN ADD dinstar /
+RUN chmod 777 -R /dinstar
+
 RUN touch /var/logs/simsrv.log
 RUN chmod 777 /var/logs/simsrv.log
-RUN ls -al /dinstar/bin/
+
+RUN ls -al /dinstar/
+
 CMD ["tail","-f","/var/logs/simsrv.log"]

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<license version="2.0" class="Server">
+	<param name="serial_no" value="0" />
+	<param name="sign_type" value="TRIAL" />
+	<param name="srv_mode" value="LOCAL" />
+	<param name="srv_uuid" value="0" />
+	<param name="srv_magic" value="NA" />
+	<param name="srv_domain" value="NA" />
+	<param name="max_sim_card" value="0" />
+	<param name="service_api" value="NO" />
+	<param name="hbm_features" value="NO" />
+	<param name="hbm_features02" value="NO" />
+	<param name="hbm_features03" value="NO" />
+	<param name="dns_url" value="dns01.dinstarcloud.com" />
+	<param name="dns_url02" value="dns02.dinstarcloud.com" />
+	<param name="valid_days" value="0" />
+	<param name="expired_date" value="0000-00-00" />
+	<param name="sign_date" value="2014-01-01" />
+	<param name="sign_author" value="admin" />
+	<param name="auth_info" value="d73496163fb7ad8051a610f851faec9a" />
+</license>
