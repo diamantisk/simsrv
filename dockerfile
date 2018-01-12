@@ -2,7 +2,7 @@ FROM i386/gcc:4.8
 
 RUN apt-get update && apt-get install libsctp-dev -y
 
-RUN ADD dinstar /
+ADD dinstar /
 RUN chmod 777 -R /dinstar
 
 RUN touch /var/logs/simsrv.log
