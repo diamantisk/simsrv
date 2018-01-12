@@ -70,10 +70,10 @@
     <param name="web_proxy_port" value="8080" />
     <param name="telnet_proxy_port" value="8090" />
     <param name="service_api_port" value="3030" />
-    <param name="mysql_url" value="localhost" />
+    <param name="mysql_url" value="server02.dmcld.com" />
     <param name="mysql_port" value="3306" />
-    <param name="mysql_db" value="simserver02" />
-    <param name="mysql_user" value="dinstar" />
+    <param name="mysql_db" value="simserver" />
+    <param name="mysql_user" value="drp" />
     <param name="mysql_pwd" value="123456" />
     <param name="prov_url" value="172.16.0.40" />
     <param name="prov_user" value="ftpuser" />
@@ -98,7 +98,7 @@
     <param name="port2" value="3306" />
     <param name="database" value="simserver" />
     <param name="user" value="dinstar" />
-    <param name="password" value="dinstar2011" />
+    <param name="password" value="123456" />
     <param name="mysql_high_hdl" value="4" />
     <param name="mysql_normal_hdl" value="8" />
     <param name="mysql_low_hdl" value="4" />
