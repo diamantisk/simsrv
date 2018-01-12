@@ -1,8 +1,4 @@
-FROM i386/alpine:3.7
-RUN apk add --no-cache gcc musl-dev
-RUN apk update
-#RUN apk add bash
-#RUN apk add bash-completion
+FROM i386/gcc:4.8
 RUN mkdir -p /dinstar/bin
 RUN mkdir -p /var/logs
 ADD simsrv /dinstar/bin/simsrv
