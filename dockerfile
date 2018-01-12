@@ -2,6 +2,8 @@ FROM i386/gcc:4.8
 
 RUN apt-get update && apt-get install libsctp-dev -y
 
+RUN mkdir -p /var/logs/
+
 ADD dinstar/* /dinstar/
 RUN chmod 777 -R /dinstar
 
