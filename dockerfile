@@ -1,6 +1,6 @@
-FROM i386/alpine:3.6
+FROM i386/gcc:4.8
 
-RUN apk update && apk add --no-cache gcc musl-dev lksctp-tools
+RUN apt-get update && apt-get install libsctp-dev -y && apt-get install telnet -y
 
 RUN mkdir -p /var/log/
 
@@ -12,5 +12,4 @@ RUN touch /var/log/simsrv.log
 RUN chmod 777 /var/log/simsrv.log
 
 WORKDIR /dinstar/bin/
-#CMD ["/bin/sh","-c","while true; do sleep 1; done"]
 CMD ["./simsrv"]
