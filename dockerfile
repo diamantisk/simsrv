@@ -1,6 +1,6 @@
-FROM i386/gcc:4.8
+FROM i386/alipine:3.6
 
-RUN apt-get update && apt-get install libsctp-dev -y && apt-get install telnet -y
+RUN apt-get update && apt-get install libstdc++ libsctp-dev -y
 
 RUN mkdir -p /var/log/
 

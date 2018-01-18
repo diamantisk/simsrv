@@ -1,12 +1,15 @@
-from frolvlad/alpine-gcc
-RUN apk update
-RUN apk add bash
-RUN apk add bash-completion
-RUN mkdir -p /dinstar/bin
-RUN mkdir -p /var/logs
-ADD simsrv /dinstar/bin/simsrv
-RUN chmod 777 /dinstar/bin/simsrv
-RUN touch /var/logs/simsrv.log
-RUN chmod 777 /var/logs/simsrv.log
-RUN ls -al /dinstar/bin/
-CMD ["tail","-f","/var/logs/simsrv.log"]
+FROM i386/alipine:3.6
+
+RUN apt-get update && apt-get install libstdc++ libsctp-dev -y
+
+RUN mkdir -p /var/log/
+
+ADD dinstar/bin/* /dinstar/bin/
+ADD dinstar/cfg/* /dinstar/cfg/
+RUN chmod 777 -R /dinstar
+
+RUN touch /var/log/simsrv.log
+RUN chmod 777 /var/log/simsrv.log
+
+WORKDIR /dinstar/bin/
+CMD ["./simsrv"]
