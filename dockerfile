@@ -12,4 +12,4 @@ RUN touch /var/log/simsrv.log
 RUN chmod 777 /var/log/simsrv.log
 
 WORKDIR /dinstar/bin/
-CMD ["./simsrv"]
+CMD ["tail -f /var/log/simsrv.log"]
