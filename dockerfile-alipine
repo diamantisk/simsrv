@@ -2,7 +2,7 @@ FROM i386/alpine:3.7
 
 ADD ./etc/pacman.conf /etc/pacman.conf
 
-RUN apk add --update --no-cache pacman && \
+RUN apk add --no-cache pacman && \
     pacman -Sy lib32-glibc && \ 
     apk del pacman
 
