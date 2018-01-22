@@ -18,7 +18,7 @@ RUN apk add --update --no-cache wget tar xz && \
     rm -Rf glibc-${GLIBC_VERSION} glibc-${GLIB_VERSION}-${GLIB_ARCH}.pkg.tar.xz && \ 
     apk del wget tar xz
 
-RUN apk add --no-cache file lksctp-tools
+RUN apk add --no-cache lksctp-tools mariadb-client-libs
 
 RUN mkdir -p /var/log/
 
