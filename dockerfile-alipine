@@ -1,6 +1,6 @@
 FROM i386/alpine:3.7
 
-RUN apk update && apk add --no-cache pacman-dev
+RUN apk update && apk add --no-cache pacman
 ADD ./etc/* /etc/
 ADD ./etc/pacman.d/* /etc/pacman.d/
 RUN pacman -Syy
