@@ -7,13 +7,13 @@ ADD ./ld.so.conf ./tmp/ld.so.conf
 
 RUN apk add --update --no-cache wget tar xz && \
     mkdir -p lib32-glibc-${GLIB_VERSION} \
-    /usr/glibc && \
+    /usr/lib32-glibc && \
     ln -s /bin/bash /usr/bin/bash && \
     wget http://mirrors.kernel.org/archlinux/core/os/${GLIB_ARCH}/lib32-glibc-${GLIB_VERSION}-${GLIB_ARCH}.pkg.tar.xz -O lib32-glibc-${GLIB_VERSION}-${GLIB_ARCH}.pkg.tar.xz && \
     tar xf lib32-glibc-${GLIB_VERSION}-${GLIB_ARCH}.pkg.tar.xz -C lib32-glibc-${GLIB_VERSION} && \
     mv tmp/ld.so.conf /etc/ld.so.conf && \
-    cp -a lib32-glibc-${GLIB_VERSION}/usr /usr/glibc/ && \
-    lib32-glibc-${GLIB_VERSION}/usr/bin/ldconfig /usr/glibc/usr /usr/glibc/usr/lib && \
-    ln -s /usr/glibc/usr/lib/ld-linux.so.2 /lib/ld-linux.so.2  && \
+    cp -a lib32-glibc-${GLIB_VERSION}/usr /usr/lib32-glibc/ && \
+    lib32-glibc-${GLIB_VERSION}/usr/bin/ldconfig /usr/lib32-glibc/usr /usr/lib32-glibc/usr/lib && \
+    ln -s /usr/lib32-glibc/usr/lib/ld-linux.so.2 /lib/ld-linux.so.2  && \
     rm -Rf lib32-glibc-${GLIB_VERSION} lib32-glibc-${GLIB_VERSION}-${GLIB_ARCH}.pkg.tar.xz && \ 
     apk del wget tar xz
