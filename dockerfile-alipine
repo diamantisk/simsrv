@@ -1,10 +1,11 @@
-FROM alpine:3.7
+FROM alpine
 
-RUN apk update && apk add --no-cache pacman
+RUN apk update && apk add --no-cache pacman-dev
 ADD ./etc/* /etc/
 ADD ./etc/pacman.d/* /etc/pacman.d/
 RUN pacman -Syy
 #RUN pacman -Sy --noconfirm lib32-glibc
+pacman -S tuna.tsinghua.edu-keyring
 
 RUN apk add --no-cache file lksctp-tools
 
