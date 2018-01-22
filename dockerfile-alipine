@@ -1,10 +1,12 @@
 FROM i386/alpine:3.7
+#替换为国内源
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories
 
 ENV GLIB_VERSION=2.26-5
 ENV GLIB_ARCH=i686
 
 ADD ./ld.so.conf ./tmp/ld.so.conf
-
+#设置glibc
 RUN apk add --update --no-cache wget tar xz && \
     mkdir -p glibc-${GLIBC_VERSION} \
     /usr/glibc && \
@@ -17,18 +19,14 @@ RUN apk add --update --no-cache wget tar xz && \
     ln -s /usr/glibc/usr/lib/ld-linux.so.2 /lib/ld-linux.so.2  && \
     rm -Rf glibc-${GLIBC_VERSION} glibc-${GLIB_VERSION}-${GLIB_ARCH}.pkg.tar.xz && \ 
     apk del wget tar xz
-
-RUN apk add --no-cache lksctp-tools mariadb-client-libs libssl1.0
+#安装simsrv依赖库
+RUN apk add --no-cache lksctp-tools mariadb-client-libs libssl1.0 zlib
 
 RUN mkdir -p /var/log/
 
 ADD dinstar/bin/* /dinstar/bin/
 ADD dinstar/cfg/* /dinstar/cfg/
 RUN chmod 777 -R /dinstar
-
-#RUN touch /var/log/simsrv.log
-#RUN chmod 777 /var/log/simsrv.log
-
 WORKDIR /dinstar/bin/
 #CMD ["/bin/sh","-c","while true; do sleep 1; done"]
 CMD ["./simsrv"]
