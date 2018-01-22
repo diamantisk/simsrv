@@ -2,7 +2,7 @@ FROM vimalathithen/alpine-glibc-x86
 
 #RUN apk update && apk add --no-cache glib-dev libc-dev lksctp-tools
 RUN apk update && apk add --no-cache file
-RUN wget http://dl-3.alpinelinux.org/alpine/v3.7/main/x86/lksctp-tools-dev-1.0.17-r0.apk && apk add ./lksctp-tools-dev-1.0.17-r0.apk 
+RUN wget http://dl-4.alpinelinux.org/alpine/latest-stable/main/x86/lksctp-tools-1.0.17-r0.apk && apk add ./lksctp-tools-1.0.17-r0.apk
 
 RUN mkdir -p /var/log/
 
