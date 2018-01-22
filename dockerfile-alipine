@@ -1,4 +1,4 @@
-FROM frolvlad/alpine-glibc
+FROM vimalathithen/alpine-glibc-x86
 
 #RUN apk update && apk add --no-cache glib-dev libc-dev lksctp-tools
 RUN apk update && apk add --no-cache lksctp-tools
