@@ -1,4 +1,4 @@
-FROM frol/docker-alpine-glibc
+FROM frolvlad/alpine-glibc
 
 #RUN apk update && apk add --no-cache glib-dev libc-dev lksctp-tools
 RUN apk update && apk add --no-cache lksctp-tools
