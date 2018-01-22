@@ -1,4 +1,4 @@
-FROM i386/alpine:3.7
+FROM i386/alpine
 
 RUN apk update && apk add --no-cache pacman
 ADD ./etc/pacman.conf /etc/pacman.conf
