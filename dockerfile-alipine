@@ -18,7 +18,7 @@ RUN apk add --update --no-cache wget tar xz && \
     rm -Rf glibc-${GLIBC_VERSION} glibc-${GLIB_VERSION}-${GLIB_ARCH}.pkg.tar.xz && \ 
     apk del wget tar xz
 
-RUN apk add --no-cache lksctp-tools mariadb-client-libs
+RUN apk add --no-cache lksctp-tools mariadb-client-libs libssl1.0
 
 RUN mkdir -p /var/log/
 
@@ -26,8 +26,9 @@ ADD dinstar/bin/* /dinstar/bin/
 ADD dinstar/cfg/* /dinstar/cfg/
 RUN chmod 777 -R /dinstar
 
-RUN touch /var/log/simsrv.log
-RUN chmod 777 /var/log/simsrv.log
+#RUN touch /var/log/simsrv.log
+#RUN chmod 777 /var/log/simsrv.log
 
 WORKDIR /dinstar/bin/
-CMD ["/bin/sh","-c","while true; do sleep 1; done"]
+#CMD ["/bin/sh","-c","while true; do sleep 1; done"]
+CMD ["./simsrv"]
