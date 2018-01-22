@@ -1,11 +1,11 @@
-FROM i386/alpine:latest
+FROM i386/alpine:3.7
 
 RUN apk update && apk add --no-cache pacman wget
 ADD ./etc/pacman.conf /etc/pacman.conf
 RUN wget -O /etc/pacman.d/mirrorlist https://www.archlinux.org/mirrorlist/all/
-RUN pacman -Sy lib32-glibc
+#RUN pacman -Sy lib32-glibc
 
-RUN apk add --no-cache file lksctp-tools
+#RUN apk add --no-cache file lksctp-tools
 
 RUN mkdir -p /var/log/
 
