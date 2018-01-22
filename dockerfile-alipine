@@ -1,7 +1,7 @@
-FROM i386/alpine:3.6
+FROM frol/docker-alpine-glibc
 
 #RUN apk update && apk add --no-cache glib-dev libc-dev lksctp-tools
-RUN apk update && apk add --no-cache gcc libc-dev musl-dev lksctp-tools
+RUN apk update && apk add --no-cache lksctp-tools
 
 RUN mkdir -p /var/log/
 
