@@ -1,12 +1,10 @@
 FROM i386/alpine:3.7
 
+RUN apk update && apk add --no-cache pacman
 ADD ./etc/pacman.conf /etc/pacman.conf
+RUN pacman -Sy lib32-glibc
 
-RUN apk add --no-cache pacman && \
-    pacman -Sy lib32-glibc && \ 
-    apk del pacman
-
-RUN apk update && apk add --no-cache file lksctp-tools
+RUN apk add --no-cache file lksctp-tools
 
 RUN mkdir -p /var/log/
 
