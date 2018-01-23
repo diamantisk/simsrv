@@ -20,7 +20,10 @@ RUN apk add --update --no-cache wget tar xz && \
     rm -Rf glibc-${GLIBC_VERSION} glibc-${GLIB_VERSION}-${GLIB_ARCH}.pkg.tar.xz && \ 
     apk del wget tar xz
 #安装simsrv依赖库
-RUN apk add --update --no-cache file lksctp-tools mariadb-client-libs libssl1.0 zlib zlib-dev
+RUN apk add --update --no-cache file lksctp-tools mariadb-client-libs libssl1.0 zlib musl
+#建立动态链接
+RUN ln -s /lib/libc.musl-x86.so.1 /usr/lib/libc.musl-x86.so.1 && \
+    ln -s /lib/libz.so.1 /usr/lib/libz.so.1
 
 RUN mkdir -p /var/log/
 
