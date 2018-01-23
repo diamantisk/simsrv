@@ -1,13 +1,13 @@
 FROM i386/debian:7-slim
 
-ADD dinstar/bin/* /dinstar/bin/
-ADD dinstar/cfg/* /dinstar/cfg/
+#ADD dinstar/bin/* /dinstar/bin/
+#ADD dinstar/cfg/* /dinstar/cfg/
+COPY ./dinstar /dinstar
+RUN chmod 777 -R /dinstar
 RUN apt-get update && \
-	apt-get install libsctp-dev libmysqlclient-dev libssl-dev -y > /dev/null && \
-	chmod 777 -R /dinstar && \
-	apt-get autoclean && \
-	apt-get clean && \
-	apt-get autoremove && \
+	apt-get install libmysqlclient-dev \
+	libsctp-dev \
+	libssl-dev -y > /dev/null && \
 	rm -rf /var/lib/apt/lists/*
 	
 WORKDIR /dinstar/bin
