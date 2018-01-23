@@ -11,5 +11,4 @@ RUN apt-get update && \
 	rm -rf /var/lib/apt/lists/*
 	
 WORKDIR /dinstar/bin
-#CMD ["/dinstar/bin/simsrv"]
-CMD ["/bin/sh","-c","while true; do sleep 1; done"]
+CMD ["/dinstar/bin/simsrv"]
