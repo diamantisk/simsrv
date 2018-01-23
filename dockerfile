@@ -1,4 +1,4 @@
-FROM busybox/1.26-glibc
+FROM busybox:1.26-glibc
 
 ADD dinstar/bin/* /dinstar/bin/
 ADD dinstar/cfg/* /dinstar/cfg/
