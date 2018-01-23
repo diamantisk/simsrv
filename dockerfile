@@ -1,4 +1,4 @@
-FROM busybox:ubuntu
+FROM i386/debian:7-slim
 
 ADD dinstar/bin/* /dinstar/bin/
 ADD dinstar/cfg/* /dinstar/cfg/
