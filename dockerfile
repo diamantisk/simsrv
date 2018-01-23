@@ -1,4 +1,4 @@
-FROM i386/debian:7-slim
+FROM busybox/1.26-glibc
 
 ADD dinstar/bin/* /dinstar/bin/
 ADD dinstar/cfg/* /dinstar/cfg/
@@ -12,3 +12,4 @@ RUN apt-get update && \
 	
 WORKDIR /dinstar/bin
 CMD ["/dinstar/bin/simsrv"]
+#CMD ["/bin/sh","-c","while true; do sleep 1; done"]
