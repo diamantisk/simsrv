@@ -1,15 +1,8 @@
-FROM i386/gcc:4.8
-
-RUN apt-get update && apt-get install libsctp-dev -y && apt-get install telnet -y
-
-RUN mkdir -p /var/log/
+FROM i386/debian:jessie-slim
 
 ADD dinstar/bin/* /dinstar/bin/
 ADD dinstar/cfg/* /dinstar/cfg/
-RUN chmod 777 -R /dinstar
+RUN apt-get update && apt-get install gcc libsctp-dev telnet -y && chmod 777 -R /dinstar
 
-RUN touch /var/log/simsrv.log
-RUN chmod 777 /var/log/simsrv.log
-
-WORKDIR /dinstar/bin/
-CMD ["./simsrv"]
+#CMD ["/dinstar/bin/simsrv"]
+CMD ["/bin/sh","-c","while true; do sleep 1; done"]
