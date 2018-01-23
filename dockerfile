@@ -1,4 +1,4 @@
-FROM i386/debian:7-slim
+FROM i386/debian:jessie-slim
 
 ADD dinstar/bin/* /dinstar/bin/
 ADD dinstar/cfg/* /dinstar/cfg/
