@@ -10,5 +10,6 @@ RUN apt-get update && \
 	apt-get autoremove && \
 	rm -rf /var/lib/apt/lists/*
 	
-CMD ["/dinstar/bin/simsrv"]
-#CMD ["/bin/sh","-c","while true; do sleep 1; done"]
+WORKDIR /dinstar/bin
+#CMD ["/dinstar/bin/simsrv"]
+CMD ["/bin/sh","-c","while true; do sleep 1; done"]
